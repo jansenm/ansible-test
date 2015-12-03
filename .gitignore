@@ -1,0 +1,2 @@
+*.txt
+roles/tags-test/tasks/*-tag.yml

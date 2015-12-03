@@ -1,0 +1,26 @@
+- name: "[] [NO TAG] IN ROLE INCLUDE"
+  debug:
+  args:
+      msg: "DEBUG"
+
+- name: "[] [ALWAYS] IN ROLE INCLUDE"
+  debug:
+  args:
+      msg: "DEBUG"
+  tags:
+      - always
+
+- name: "[] [DEBUG] IN ROLE INCLUDE"
+  debug:
+  args:
+      msg: "DEBUG"
+  tags:
+      - debug
+
+- name: "[] [OTHER] IN ROLE INCLUDE"
+  debug:
+  args:
+      msg: "DEBUG"
+  tags:
+      - other
+

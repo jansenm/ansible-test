@@ -1,0 +1,36 @@
+---
+# A playbook to test how tags work (or don't)
+- name: Test tags
+  gather_facts: No
+  hosts: all
+
+  roles:
+      - { role: tags-test }
+
+  tasks:
+
+      - name: "[NO TAG] IN PLAYBOOK"
+        debug:
+        args:
+            msg: "DEBUG"
+
+      - name: "[ALWAYS] IN PLAYBOOK"
+        debug:
+        args:
+            msg: "DEBUG"
+        tags:
+            - always
+
+      - name: "[DEBUG] IN PLAYBOOK"
+        debug:
+        args:
+            msg: "DEBUG"
+        tags:
+            - debug
+
+      - name: "[OTHER] IN PLAYBOOK"
+        debug:
+        args:
+            msg: "DEBUG"
+        tags:
+            - other

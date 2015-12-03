@@ -1,0 +1,45 @@
+---
+
+- name: "[NO TAG] INCLUDE IN ROLE"
+  include: no-tag.yml
+
+- name: "[ALWAYS] INCLUDE IN ROLE"
+  include: always-tag.yml
+  tags:
+      - always
+
+- name: "[DEBUG] INCLUDE IN ROLE"
+  include: debug-tag.yml
+  tags:
+      - debug
+
+- name: "[OTHER] INCLUDE IN ROLE"
+  include: other-tag.yml
+  tags:
+      - other
+
+- name: "[NO TAG] IN ROLE"
+  debug:
+  args:
+      msg: "DEBUG"
+
+- name: "[ALWAYS] IN ROLE"
+  debug:
+  args:
+      msg: "DEBUG"
+  tags:
+      - always
+
+- name: "[DEBUG] IN ROLE"
+  debug:
+  args:
+      msg: "DEBUG"
+  tags:
+      - debug
+
+- name: "[OTHER] IN ROLE"
+  debug:
+  args:
+      msg: "DEBUG"
+  tags:
+      - other
